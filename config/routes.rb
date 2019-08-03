@@ -5,9 +5,11 @@ Rails.application.routes.draw do
     passwords:     'students/passwords',
     registrations: 'students/registrations'
   }
+  root to: "students#index"
   devise_for :teachers, controllers: {
     sessions:      'teachers/sessions',
     passwords:     'teachers/passwords',
     registrations: 'teachers/registrations'
   }
+  get "/teachers/index", to: 'teachers#index'
 end

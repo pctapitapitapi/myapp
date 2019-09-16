@@ -5,14 +5,25 @@ class Students::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_account_update_params, only: [:update]
 
   # GET /resource/sign_up
-  # def new
-  #   super
-  # end
+  def new
+    @student = Student.new
+  end
 
   # POST /resource
-  # def create
-  #   super
-  # end
+  def create
+    @student = Student.create(student_params)
+    if @student.save
+      flash[:success] = "ユーザを登録しました"
+      redirect_to @student
+    else
+      flash[:danger] = "ユーザの登録に失敗しました"
+    end
+  end
+
+  private
+  def student_params
+    params.require(:student).permit(:name, :email, :password, :password_confirmation)
+  end
 
   # GET /resource/edit
   # def edit

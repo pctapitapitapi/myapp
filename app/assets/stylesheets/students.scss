@@ -2,11 +2,70 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.wrapper  {
+  position: relative;
+  min-width: 960px;
+  background-image: url("空2.jpg");
 .inner {
-  display: block;
+  display: flex;
+  border-bottom: 1px solid #e9eef1;
   .title {
-    
+    display: flex;
+    margin: 0 50px 0 40px;
+    h1 {
+      padding-top: 15px;
+    }
   }
+  .right {
+    display: flex;
+    width: 500px;
+    margin-left: 400px;
+    .loginbtn {
+      padding: 50px 10px 50px 20px;
+      .teacherbtn {
+        padding: 8px 25px;
+        color: #13b1c0;
+        border: 2px solid #13b1c0;
+        border-radius: 20px;
+        text-decoration: none;
+      }
+      .btn {
+        padding: 8px 25px;
+        color: #fff!important;
+        background: #13b1c0!important;
+        border-radius: 20px;
+        text-decoration: none;
+      }
+      .signupbtn {
+        padding: 8px 25px;
+        color: #13b1c0;
+        border: 2px solid #13b1c0;
+        border-radius: 20px;
+        text-decoration: none;
+      }
+    }
+  }
+}
 
-
+main {
+  height: 400px;
+  width: 960px;
+  margin: 0 auto;
+  text-align: center;
+  h1 {
+    padding-top: 30px;
+  }
+  p {
+    padding-top: 30px;
+  }
+}
+footer {
+  ul {
+    list-style: none;
+    a {
+      text-decoration: none; 
+      color: #13b1c0;
+    }
+  }
+}
 }
